@@ -1,8 +1,10 @@
 package com.company;
 
 
+import java.util.Scanner;
 
 public class Menu {
+    Scanner sc = new Scanner(System.in);
     void lanzarMenu(){
 
 
@@ -35,6 +37,5 @@ public class Menu {
                 return;
 
         }
-    }
     }
 }
