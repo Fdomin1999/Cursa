@@ -7,9 +7,14 @@ public class Carrera {
     int cantidadParticipantes;
     int cantidadCircuitos;
     Random random = new Random();
+    String nombre;
 
-    void recogerDatos(String tipoVehiculoRetornado, int cantidadParticipantesRetornado, int cantidadCircuitosRetorrando ){
-    tipoVehiculo = tipoVehiculoRetornado;
+    void recogerDatos(String tipoVehiculoRetornado, int cantidadParticipantesRetornado, int cantidadCircuitosRetorrando, String nombreRetornado ){
+    this.tipoVehiculo = tipoVehiculoRetornado;
+    this.cantidadParticipantes = cantidadParticipantesRetornado;
+    this.cantidadCircuitos = cantidadCircuitosRetorrando;
+    this.nombre = nombreRetornado;
+
         System.out.println(tipoVehiculoRetornado);
 
 
@@ -19,9 +24,10 @@ public class Carrera {
 
     void resultado(){
         if (tipoVehiculo.equals("coche")){
-            for (int i = 0; i < cantidadParticipantes; i++) {
+            System.out.println(nombre + " " + "1" + ":" + (random.nextInt(15) + 30) + " Minutos");
+            for (int i = 0; i < cantidadParticipantes-1; i++) {
 
-                System.out.println("Paricipante " + i + " " + "1" + ":" + (random.nextInt(15) + 30) + " Minutos");
+                System.out.println("Paricipante " + (i+1) + " " + "1" + ":" + (random.nextInt(15) + 30) + " Minutos");
 
 
             }

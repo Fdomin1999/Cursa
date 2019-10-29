@@ -21,6 +21,7 @@ Carrera carrera = new Carrera();
     int escogerCantidadCircuitos(){
         System.out.println("Cantidad de circuitos: ");
         int cantidadCircuitos = sc.nextInt();
+        sc.nextLine();
         return cantidadCircuitos;
 
     }
