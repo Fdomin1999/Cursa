@@ -1,21 +1,18 @@
 package com.company;
 
 
+import java.util.Scanner;
 
 public class Menu {
     void lanzarMenu(){
 
+        System.out.println("CURSA: ");
+        System.out.println("1.Configuració de la competició");
+        System.out.println("2.Resultats/Palmarès/ClassifiacióGeneral");
+        System.out.println("3.Jugar");
+        System.out.println("4.Acabar");
 
-
-
-        System.out.println("TORNEO: ");
-        System.out.println("1.Equipos");
-        System.out.println("2.Participantes");
-        System.out.println("3.Resultados");
-        System.out.println("4.Clasificacion");
-        System.out.println("5. Salir");
-        System.out.println("Elige una opcion:");
-
+        Scanner sc = new Scanner(System.in);
         int opcion = sc.nextInt();
 
         switch (opcion) {
@@ -30,11 +27,8 @@ public class Menu {
                 break;
             case 4:
 
-                break;
-            case 5:
                 return;
-
         }
     }
     }
-}
+
