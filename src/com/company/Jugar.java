@@ -1,6 +1,6 @@
 package com.company;
 
-public class JugarScreen {
+public class Jugar {
     public void show() {
 
     }
