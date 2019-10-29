@@ -19,8 +19,12 @@ public class Carrera {
 
     void resultado(){
         if (tipoVehiculo.equals("coche")){
-            System.out.println("1" + ":" +  (random.nextInt(15)+30) + " Minutos");
+            for (int i = 0; i < cantidadParticipantes; i++) {
 
+                System.out.println("Paricipante " + i + " " + "1" + ":" + (random.nextInt(15) + 30) + " Minutos");
+
+
+            }
 
         } else if (tipoVehiculo.equals("bicicleta")){
             System.out.println((random.nextInt(5)+5) + ":" +  (random.nextInt(15)+30) + " Minutos");
