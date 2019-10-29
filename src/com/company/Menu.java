@@ -3,6 +3,15 @@ package com.company;
 import java.util.Scanner;
 
 public class Menu {
+    Configuracion configuracion = new Configuracion();
+    Carrera carrera = new Carrera();
+
+    Scanner sc = new Scanner(System.in);
+    String nombre;
+    int cantidadParticipantes;
+    int cantidadCircuitos;
+    String tipoVehiculo;
+
     void lanzarMenu(){
 
         System.out.println("CURSA: ");
@@ -16,20 +25,33 @@ public class Menu {
 
         switch (opcion) {
             case 1:
+                nombre = configuracion.escogerNombre();
+                cantidadParticipantes = configuracion.escogerCantidadParticipantes();
 
-
+                cantidadCircuitos = configuracion.escogerCantidadCircuitos();
                 break;
+
             case 2:
-
+                mostrarClasificacion();
                 break;
+
             case 3:
+                tipoVehiculo = configuracion.escogerVehiculo();
+                carrera.recogerDatos(tipoVehiculo, cantidadParticipantes, cantidadCircuitos);
+
+                carrera.resultado();
 
                 break;
 
             case 4:
+                System.out.println("Pos sacabo");
                 return;
 
 
         }
+    }
+
+    void mostrarClasificacion(){
+
     }
 }
