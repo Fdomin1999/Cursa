@@ -2,6 +2,6 @@ package com.company;
 
 import java.util.Scanner;
 
-public class Jugar {
+public class Configuracion {
 
 }

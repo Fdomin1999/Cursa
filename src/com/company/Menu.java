@@ -1,13 +1,9 @@
 package com.company;
 
-
 import java.util.Scanner;
 
 public class Menu {
     void lanzarMenu(){
-
-
-
 
         System.out.println("CURSA: ");
         System.out.println("1.Configuració de la competició");
@@ -21,6 +17,7 @@ public class Menu {
         switch (opcion) {
             case 1:
 
+
                 break;
             case 2:
 
@@ -28,11 +25,11 @@ public class Menu {
             case 3:
 
                 break;
+
             case 4:
                 return;
 
 
         }
-    }
     }
 }
