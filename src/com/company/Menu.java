@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class Menu {
     Configuracion configuracion = new Configuracion();
     Carrera carrera = new Carrera();
+    Moto moto = new Moto();
 
     Scanner sc = new Scanner(System.in);
     String nombre;
@@ -19,6 +20,7 @@ public class Menu {
         int opcion = 0;
 
             do {
+                System.out.println();
                 System.out.println("CURSA: ");
                 System.out.println("1.Configuració de la competició");
                 System.out.println("2.Resultats");
