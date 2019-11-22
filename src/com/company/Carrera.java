@@ -83,18 +83,65 @@ public class Carrera {
 
         // acumular puntos a los 5 primeros
         // OJO: tener en cuenta si el numero de participante es menor a 5
-        participanteArrayList.stream().forEach((p)->{ System.out.println(p); });
 
 //      Dar puntos a los participantes
 
+        if (participanteArrayList.size() >= 5){
+            participanteArrayList.get(0).setPuntos(participanteArrayList.get(0).getPuntos()+5);
+            participanteArrayList.get(1).setPuntos(participanteArrayList.get(1).getPuntos()+4);
+            participanteArrayList.get(2).setPuntos(participanteArrayList.get(2).getPuntos()+3);
+            participanteArrayList.get(3).setPuntos(participanteArrayList.get(3).getPuntos()+2);
+            participanteArrayList.get(4).setPuntos(participanteArrayList.get(4).getPuntos()+1);
 
+        }
+        else if (participanteArrayList.size() == 4){
+            participanteArrayList.get(0).setPuntos(participanteArrayList.get(0).getPuntos()+5);
+            participanteArrayList.get(1).setPuntos(participanteArrayList.get(1).getPuntos()+4);
+            participanteArrayList.get(2).setPuntos(participanteArrayList.get(2).getPuntos()+3);
+            participanteArrayList.get(3).setPuntos(participanteArrayList.get(3).getPuntos()+2);
+        }
+        else if (participanteArrayList.size() == 3){
+            participanteArrayList.get(0).setPuntos(participanteArrayList.get(0).getPuntos()+5);
+            participanteArrayList.get(1).setPuntos(participanteArrayList.get(1).getPuntos()+4);
+            participanteArrayList.get(2).setPuntos(participanteArrayList.get(2).getPuntos()+3);
+        }
+        else if (participanteArrayList.size() == 2){
+            participanteArrayList.get(0).setPuntos(participanteArrayList.get(0).getPuntos()+5);
+            participanteArrayList.get(1).setPuntos(participanteArrayList.get(1).getPuntos()+4);
+        }
 
+        System.out.println();
+        System.out.println();
+
+        participanteArrayList.stream().forEach((p)->{ System.out.println(p); });
 
 
     }
 
+
     void mostrarClasificacion(){
 
+        System.out.println("\n");
+        System.out.println("\n");
+
+        for (int i = 0; i < participanteArrayList.size(); i++) {
+            participanteArrayList.get(i).setTiempo(0f);
+        }
+
+        Collections.sort(participanteArrayList, new Comparator<Participante>() {
+            @Override
+            public int compare(Participante pA, Participante pZ) {
+
+                if (pA.puntos > pZ.puntos) return -1;
+                else if (pA.puntos < pZ.puntos) return 1;
+                else return 0;
+            }
+        });
+
+
+        for (Participante participante : participanteArrayList) {
+            System.out.println(participante);
+        }
     }
 }
 
