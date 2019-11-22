@@ -32,19 +32,18 @@ public class Menu {
                     case 1:
                         nombre = configuracion.escogerNombre();
                         cantidadParticipantes = configuracion.escogerCantidadParticipantes();
-
                         cantidadCircuitos = configuracion.escogerCantidadCircuitos();
+
 
                         break;
 
                     case 2:
-                        mostrarClasificacion();
+                        carrera.mostrarClasificacion();
                         break;
 
                     case 3:
                         tipoVehiculo = configuracion.escogerVehiculo();
                         carrera.recogerDatos(tipoVehiculo, cantidadParticipantes, cantidadCircuitos, nombre);
-
                         carrera.resultado();
 
                         break;
@@ -60,7 +59,5 @@ public class Menu {
             }while (opcion!=4);
     }
 
-    void mostrarClasificacion(){
 
-    }
 }
