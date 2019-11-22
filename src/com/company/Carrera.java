@@ -15,7 +15,6 @@ public class Carrera {
     String nombre;
     float tiemponombre;
     ArrayList<Participante> participanteArrayList = new ArrayList<>();
-    ArrayList<Participante> participantesOrdenados = new ArrayList<>();
 
     void recogerDatos(String tipoVehiculoRetornado, int cantidadParticipantesRetornado, int cantidadCircuitosRetorrando, String nombreRetornado ){
         this.tipoVehiculo = tipoVehiculoRetornado;
@@ -52,16 +51,12 @@ public class Carrera {
             if (tipoVehiculo.equals("moto")) {
 
 
-                participanteArrayList.get(0).setTiempo(moto.correr());
-                System.out.format("%s %.2f \n", nombre, participanteArrayList.get(0).getTiempo());
 
+                for (int i = 0; i < participanteArrayList.size(); i++) {
 
-                for (int i = 0; i < participanteArrayList.size()-1; i++) {
+                    participanteArrayList.get(i).setTiempo(moto.correr());
 
-                    participanteArrayList.get(i+1).setTiempo(moto.correr());
-
-                    System.out.format("Participante %d %.2f \n",i+1, participanteArrayList.get(i+1).getTiempo());
-                    System.out.println(participanteArrayList.get(i).getNombre());
+                    System.out.format("%s %.2f \n",participanteArrayList.get(i).getNombre(), participanteArrayList.get(i).getTiempo());
                 }
 
                 acumularPuntosCarrera();
@@ -91,18 +86,8 @@ public class Carrera {
         participanteArrayList.stream().forEach((p)->{ System.out.println(p); });
 
 //      Dar puntos a los participantes
-        for (int i = 0; i < participanteArrayList.size(); i++) {
-            if (participanteArrayList.get(i).getNombre().equals(nombre)){
-                participanteArrayList.get(i).set
 
-            }
-        }
 
-        for (Participante participante : participanteArrayList) {
-            if (participante.getNombre().equals(nombre)){
-
-            }
-        }
 
 
 
